@@ -1,0 +1,16 @@
+[wokwi]
+version = 1
+firmware = "build/bitdoglab_project.uf2"
+elf = "build/bitdoglab_project.elf"
+
+[board]
+type = "pico-w"  # Especifica que estamos usando o Raspberry Pi Pico W
+
+[connections]
+# Conexões entre os pinos do Pico e os componentes externos
+# Exemplo: Conectar o pino GPIO0 ao LED WS2812
+gpio0 = "ws2812/din"
+
+[parts]
+# Define os componentes usados na simulação
+ws2812 = { type = "WS2812", count = 8 }  # Simula uma matriz de 8 LEDs WS2812
